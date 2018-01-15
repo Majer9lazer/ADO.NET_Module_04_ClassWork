@@ -67,6 +67,7 @@ namespace ADO.NET_Module_04
             col.AutoIncrementStep = 1;
             col.ReadOnly = true;
            
+
             col.Unique = true;
             tbl.PrimaryKey = new DataColumn[]
             {

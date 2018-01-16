@@ -16,6 +16,10 @@
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <Button x:Name="ConnectButton" Click="ConnectButton_Click" Content="Connect" Margin="5"></Button>
             <Button x:Name="CreateTableButton" Click="CreateTableButton_Click" Content="Create Table" Margin="5"></Button>
+            <Button x:Name="GetUserS" Click="GetUserS_Click" Content="Get Users" Margin="5"></Button>
+            <TextBox x:Name="UserPAssword" Width="70" VerticalAlignment="Center"></TextBox>
+            <Button x:Name="UpdateUsers" Click="UpdateUsers_Click" Content="Updaete Users" Margin="5"></Button>
+            <Button x:Name="CreateTrackEveluation" Click="CreateTrackEveluation_Click" Content="CreateTrackEveluation" Margin="5"></Button>
         </StackPanel>
         <TabControl Grid.Row="1">
             <TabItem Header="Colums">
@@ -36,6 +40,19 @@
                         <GridView>
                             <GridView.Columns>
                                 <GridViewColumn Header="Cell" DisplayMemberBinding="{Binding Path=cell }"></GridViewColumn>
+                                <!--<GridViewColumn Header="DataType" DisplayMemberBinding="{Binding Path=DataType }"></GridViewColumn>-->
+                            </GridView.Columns>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </TabItem>
+            <TabItem Header="Users">
+                <ListView x:Name="UsersList">
+                    <ListView.View>
+                        <GridView>
+                            <GridView.Columns>
+                                <GridViewColumn Header="UserID" DisplayMemberBinding="{Binding Path=UserID}"></GridViewColumn>
+                                <GridViewColumn Header="UserLogin" DisplayMemberBinding="{Binding Path=UserLogin}"></GridViewColumn>
                                 <!--<GridViewColumn Header="DataType" DisplayMemberBinding="{Binding Path=DataType }"></GridViewColumn>-->
                             </GridView.Columns>
                         </GridView>
